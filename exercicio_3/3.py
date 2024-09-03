@@ -1,7 +1,11 @@
+import os
 import json
 
+current_dir = os.path.dirname(os.path.abspath(__file__))
+json_path = os.path.join(current_dir, 'dados.json')
+
 # Carregar os dados do arquivo JSON
-with open('faturamento.json', 'r') as file:
+with open(json_path, 'r') as file:
     faturamento_data = json.load(file)
 
 # Filtrar dias com faturamento
